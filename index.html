@@ -3,7 +3,7 @@
 <head>
 
 <meta charset="utf-8">
-<link rel="canonical" href="http://www.couriernewjersey.com/sideshow/sideshow.html" />
+<link rel="canonical" href="http://www.couriernewjersey.com/sideshow/" />
 <title>Sideshow</title>
 <meta name="keywords" content="html5 game" >
 <meta name="description" content="A mario-like HTML5 game with Bart Simpson." >
@@ -38,24 +38,19 @@
 <div class="info">
   <div class="description">
     <p>Sideshow</p>
-    <ul>
-      <li><i>Keyboard Controls</i></li>
-      <li>&#8592; : Move left</li>
-      <li>&#8594; : Move right</li>
-      <li>&#8593;&nbsp; : Jump</li>
-      <li>&#8595;&nbsp; : Go down pipe <!-- (restart level) --></li>
-      <li>
-        <audio controls autoplay>
-          <source src="sideshow.mp3" type="audio/mpeg"><!-- "Boom Biddy Bye Bye (Insrumental)" by Cypress Hill -->
-        </audio>
-      </li>
-    </ul>
-    <div class="facebook">
-      <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fmonmouthcourier%3Fref%3Dhl&amp;width&amp;layout=standard&amp;action=like&amp;show_faces=true&amp;share=true&amp;height=120" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:60px;" allowTransparency="true"></iframe>
-    </div><!-- .facebook -->
+    <div class="music">
+      <audio controls autoplay>
+        <source src="sideshow.mp3" type="audio/mpeg">
+      </audio>
+    </div><!-- .musuc -->
+    <div class="joystick">
+      <button onmousedown="moveup()" onmouseup="clearup()" ontouchstart="moveup()" ontouchend="clearup()">&#8593;</button><br>
+      <button onmousedown="moveleft()" onmouseup="clearleft()" ontouchstart="moveleft()" ontouchend="clearleft()" style="margin-right:90px;">&#8592;</button>
+      <button onmousedown="moveright()" onmouseup="clearright()" ontouchstart="moveright()" ontouchend="clearright()">&#8594;</button><br>
+      <button onmousedown="movedown()" onmouseup="cleardown()" ontouchstart="movedown()" ontouchend="cleardown()">&#8595;</button>
+    </div><!-- .joystick -->
     <ul class="icons">
       <li><a href="https://www.facebook.com/anthony.maseda" target= "blank" rel="bookmark" title="Facebook" class="icon fa-facebook flip-animate"><span class="label">Facebook</span></a></li>
-      <li><a href="https://instagram.com/tony_maseda/" target= "blank" rel="bookmark" title="Instagram" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
       <li><a href="https://twitter.com/AnthonyMaseda" target= "blank" rel="bookmark" title="Twitter" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
       <li><a href="https://www.youtube.com/channel/UCxR1elfy91jLjkdI5FbG2Fg" target= "blank" rel="bookmark" title="YouTube" class="icon fa-youtube"><span class="label">YouTube</span></a></li>
       <li><a href="https://github.com/CMBmaseda" target= "blank" rel="bookmark" title="Github" class="icon fa-github"><span class="label">Github</span></a></li>
@@ -64,6 +59,57 @@
     </ul><!-- .icons -->
   </div><!-- .description-->
 </div><!-- .info -->
+
+<script>
+  function moveup() {
+    var e = jQuery.Event("keydown");
+    e.which = 38;
+    e.keyCode = 38;
+    jQuery("#stage").trigger(e);
+  }
+  function clearup() {
+    var e = jQuery.Event("keyup");
+    e.which = 38;
+    e.keyCode = 38;
+    jQuery("#stage").trigger(e);
+  }
+  function movedown() {
+    var e = jQuery.Event("keydown");
+    e.which = 40;
+    e.keyCode = 40;
+    jQuery("#stage").trigger(e);
+  }
+  function cleardown() {
+    var e = jQuery.Event("keyup");
+    e.which = 40;
+    e.keyCode = 40;
+    jQuery("#stage").trigger(e);
+  }
+  function moveleft() {
+    var e = jQuery.Event("keydown");
+    e.which = 37;
+    e.keyCode = 37;
+    jQuery("#stage").trigger(e);
+  }
+  function clearleft() {
+    var e = jQuery.Event("keyup");
+    e.which = 37;
+    e.keyCode = 37;
+    jQuery("#stage").trigger(e);
+  }
+  function moveright() {
+    var e = jQuery.Event("keydown");
+    e.which = 39;
+    e.keyCode = 39;
+    jQuery("#stage").trigger(e);
+  }
+  function clearright() {
+    var e = jQuery.Event("keyup");
+    e.which = 39;
+    e.keyCode = 39;
+    jQuery("#stage").trigger(e);
+  }
+</script>
 
 </body>
 </html>

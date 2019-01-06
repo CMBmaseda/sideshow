@@ -106,7 +106,7 @@ function update(){
 		// console.log(elevators[e].style.top);
 	}
 
-	//correct character position if hes colliding with objects
+	// correct character position if hes colliding with objects
 	collisionAdjust();
 
 	render();
