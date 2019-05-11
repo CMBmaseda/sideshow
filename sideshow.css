@@ -111,7 +111,7 @@ audio {
 	text-align: center;
 }
 
-.music  {
+.music {
 	margin-bottom: 12px;
 }
 
@@ -128,8 +128,7 @@ audio {
   border: 2px solid #dad4ec;
   border-radius: 16.666%;
 	color: #f3e7e9;
-	background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
-	background-blend-mode: multiply,multiply;
+	background-image: linear-gradient(to left, #434343 0%, black 100%);
 }
 .joystick button:hover {
 	-webkit-filter: hue-rotate(180deg);
@@ -221,5 +220,16 @@ ul.icons li a:hover {
 	}
 	ul.icons {
 		margin-top: 60px;
+	}
+}
+
+@media screen and (max-width: 640px) {
+	.description {
+	  padding: 0px;
+	}
+	.joystick button {
+	  min-width: 108px;
+		min-height: 108px;
+		margin: 6px auto;
 	}
 }
