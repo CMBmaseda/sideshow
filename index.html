@@ -1,22 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-
-<meta charset="utf-8">
-<link rel="canonical" href="http://www.couriernewjersey.com/sideshow/" />
-<title>Sideshow</title>
-<meta name="keywords" content="html5 game" >
-<meta name="description" content="A mario-like HTML5 game with Bart Simpson." >
-<meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="viewport" content="width=640">
-<link href="sideshow_images/question_block.gif" rel="icon" type="image/x-icon" />
-<link href='http://fonts.googleapis.com/css?family=Audiowide|Bungee+Shade' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" type="text/css" href="sideshow.css">
-<script src="https://use.fontawesome.com/f7e19a4b65.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
-<script type="text/javascript" src="sideshow.js"></script>
-
+  <title>Sideshow</title>
+  <meta name="description" content="A mario-like HTML5 game with Bart Simpson." >
+  <meta name="keywords" content="html5 game" >
+  <meta name="viewport" content="width=640">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link href='http://fonts.googleapis.com/css?family=Audiowide|Bungee+Shade' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="sideshow.css">
+  <script src="https://use.fontawesome.com/f7e19a4b65.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+  <script type="text/javascript" src="sideshow.js"></script>
 </head>
 <body>
 
@@ -37,7 +31,7 @@
 
 <div class="info">
   <div class="description">
-    <p>Sideshow</p>
+    <h1>Sideshow</h1>
     <div class="music">
       <audio controls autoplay>
         <source src="sideshow.mp3" type="audio/mpeg">
@@ -50,13 +44,14 @@
       <button onmousedown="movedown()" onmouseup="cleardown()" ontouchstart="movedown()" ontouchend="cleardown()">&#8595;</button>
     </div><!-- .joystick -->
     <ul class="icons">
-      <li><a href="https://www.facebook.com/" target="_blank" rel="bookmark" title="Facebook" class="icon fa-facebook flip-animate"><span class="label">Facebook</span></a></li>
-      <li><a href="https://twitter.com/" target="_blank" rel="bookmark" title="Twitter" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-      <li><a href="https://www.youtube.com/channel/UCxR1elfy91jLjkdI5FbG2Fg" target="_blank" rel="bookmark" title="YouTube" class="icon fa-youtube"><span class="label">YouTube</span></a></li>
-      <li><a href="https://github.com/TonyMaseda" target="_blank" rel="bookmark" title="Github" class="icon fa-github"><span class="label">Github</span></a></li>
-      <li><a href="https://www.linkedin.com/profile/view?id=164611762&trk=nav_responsive_tab_profile" target="_blank" rel="bookmark" title="Linkedin" class="icon fa-linkedin"><span class="label">Linkedin</span></a></li>
-      <li><a href="mailto:ajmaseda@gmail.com" class="icon fa-envelope" title="Email"><span class="label">Gmail</span></a></li>
+      <li><a href="https://www.youtube.com/channel/UCxR1elfy91jLjkdI5FbG2Fg" target="_blank" rel="bookmark" title="YouTube" class="icon fa-youtube-square"><span class="label">YouTube</span></a></li>
+      <li><a href="https://www.facebook.com/" target="_blank" rel="bookmark" title="Facebook" class="icon fa-facebook-square flip-animate"><span class="label">Facebook</span></a></li>
+      <li><a href="https://www.linkedin.com/profile/view?id=164611762&trk=nav_responsive_tab_profile" target="_blank" rel="bookmark" title="Linkedin" class="icon fa-linkedin-square"><span class="label">Linkedin</span></a></li>
+      <li><a href="mailto:ajmaseda@gmail.com" class="icon fa-envelope-square" title="Email"><span class="label">Gmail</span></a></li>
+      <li><a href="https://github.com/TonyMaseda" target="_blank" rel="bookmark" title="Github" class="icon fa-github-square"><span class="label">Github</span></a></li>
+      <li><a href="/rps.html" target="_blank" class="icon fa-question-circle" title="Rock, Paper, Scissors"><span class="label">Rock, Paper, Scissors</span></a></li>
     </ul><!-- .icons -->
+    <p>&copy; <script>document.write(new Date().getFullYear())</script> | All Rights Reserved</p>
   </div><!-- .description-->
 </div><!-- .info -->
 
@@ -110,42 +105,6 @@
     jQuery("#stage").trigger(e);
   }
 </script>
-
-<script>
-  // var choice1 = prompt("Do you choose rock, paper or scissors?");
-  //  console.log(choice1);
-  // var choice2 = Math.random();
-  //  console.log(choice2);
-  // if (choice2 < 0.33) {
-  //   choice2 = "rock";
-  //   console.log(choice2);
-  // }
-  // else if (choice2 <= 0.66) {
-  //   choice2 = "paper";
-  //   console.log(choice2);
-  // }
-  // else {
-  //   choice2 = "scissors";
-  //   console.log(choice2);
-  // }
-  // var compare = {
-  //   "scissors":{"paper": "<h1>Scissors beat Paper</h1>",   "rock": "<h1>Rock Beats Scissors</h1>"} ,
-  //   "rock":    {"paper": "<h1>Paper Beats Rock</h1>",   "scissors": "<h1>Rock Beats Scissors</h1>"} ,
-  //   "paper":   {"scissors": "<h1>Scissors Beat Paper</h1>",  "rock": "<h1>Paper Beats Rock</h1>"} ,
-  //   "Hammer":  {"paper": "<h1>Scissors beat Paper</h1>",
-  //     		     "scissors": "<h1>Rock Beats Scissors</h1>",
-  //     		     "rock": "<h1>Paper Beats Rock</h1>"}
-  // }
-  // if(choice1 == choice2) {
-  //   document.write("<h1>Tie</h1>");
-  //   console.log("Tie");
-  // }
-  // else {
-  //   document.write(compare[choice1][choice2]);
-  //   console.log(compare[choice1][choice2]);
-  // }
-</script>
-
 
 </body>
 </html>

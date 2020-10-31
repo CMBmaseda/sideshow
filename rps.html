@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Rock Paper Scissor</title>
+  <meta name="keywords" content="rock, paper, scissors" >
+  <meta name="description" content="An HTML5 version of rock paper scissors." >
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+  <link rel="shortcut icon" href="favicon.ico">
+  <style>
+    body {
+      font-family: "Times New Roman", Times, serif;
+      line-height: 1.1;
+      text-align: center;
+      color: #dad4ec;
+      background: rgba(3,3,3,0.9);
+    }
+    div {
+      position: relative;
+    }
+    h1 {
+      margin-top: 90px;
+    	font-size: 36px;
+    }
+    h2 {
+      margin-top: 90px;
+    	font-size: 30px;
+    }
+    p {
+      margin-top: 360px;
+      font-size: 12px;
+    }
+    a {
+      text-decoration: none;
+      color: rgba(48, 249, 185, 0.7);
+    }
+    a:hover {
+      filter: grayscale(77%);
+    }
+  </style>
+</head>
+<body>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-49926412-1', 'couriernewjersey.com');
+  ga('send', 'pageview');
+</script>
+
+<script>
+  var choice1 = prompt("Do you choose rock, paper or scissors?");
+   console.log(choice1);
+  var choice2 = Math.random();
+   console.log(choice2);
+  if (choice2 < 0.33) {
+    choice2 = "rock";
+    console.log(choice2);
+  }
+  else if (choice2 <= 0.66) {
+    choice2 = "paper";
+    console.log(choice2);
+  }
+  else {
+    choice2 = "scissors";
+    console.log(choice2);
+  }
+  var compare = {
+    "rock":     { "paper": "<h1>Paper Beats Rock</h1>", "scissors": "<h1>Rock Beats Scissors</h1>" },
+    "paper":    { "scissors": "<h1>Scissors Beat Paper</h1>", "rock": "<h1>Paper Beats Rock</h1>" },
+    "scissors": { "paper": "<h1>Scissors beat Paper</h1>", "rock": "<h1>Rock Beats Scissors</h1>" },
+    "HAMMER":   { "rock": "<h1>Paper Beats Rock</h1>", "paper": "<h1>Scissors beat Paper</h1>", "scissors": "<h1>Rock Beats Scissors</h1>" }
+  }
+  if(choice1 == choice2) {
+    document.write("<h1>Tie</h1>");
+    console.log("Tie");
+  }
+  else {
+    document.write(compare[choice1][choice2]);
+    console.log(compare[choice1][choice2]);
+  }
+</script>
+<h2><a href='#' onClick='window.location.reload(true);'>Play Again</a></h2>
+<p>&copy; <script>document.write(new Date().getFullYear())</script> | All Rights Reserved</p>
+
+</body>
+</html>
